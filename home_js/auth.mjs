@@ -4,7 +4,7 @@ function authChecker() {
 elLoginForm.addEventListener("submit",(evt)=>{
     evt.preventDefault();
     elLoginForm.querySelector("button[type='submit']").addEventListener("click",()=>{
-    let emptyInputs = [];
+    const emptyInputs = [];
     elLoginForm.querySelectorAll("input").forEach(el=>{if(el.value.trim()=='')emptyInputs.push(el.name)});
     if(emptyInputs.length!=0) {
         toastUI(`Please fill ${emptyInputs[0]}!`,"warning");
@@ -41,7 +41,7 @@ elLoginForm.addEventListener("submit",(evt)=>{
 elRegisterForm.addEventListener("submit",(evt)=>{
     evt.preventDefault();
     elRegisterForm.querySelector("button[type='submit']").addEventListener("click",()=>{
-    let emptyInputs = [];
+    const emptyInputs = [];
     elRegisterForm.querySelectorAll("input").forEach(el=>{if(el.value.trim()=='')emptyInputs.push(el.name)});
     if(emptyInputs.length!=0) {
         toastUI(`Please fill ${emptyInputs[0]}!`,"warning");

@@ -856,11 +856,20 @@
   .start-0 {
     inset-inline-start: calc(var(--spacing) * 0);
   }
+  .end-2 {
+    inset-inline-end: calc(var(--spacing) * 2);
+  }
+  .end-2\.5 {
+    inset-inline-end: calc(var(--spacing) * 2.5);
+  }
   .end-5 {
     inset-inline-end: calc(var(--spacing) * 5);
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
+  }
+  .top-3 {
+    top: calc(var(--spacing) * 3);
   }
   .top-5 {
     top: calc(var(--spacing) * 5);
@@ -897,6 +906,12 @@
   }
   .z-100 {
     z-index: 100;
+  }
+  .col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
   }
   .container {
     width: 100%;
@@ -951,6 +966,12 @@
   }
   .my-\[10px\] {
     margin-block: 10px;
+  }
+  .-ms-0 {
+    margin-inline-start: calc(var(--spacing) * -0);
+  }
+  .-ms-0\.5 {
+    margin-inline-start: calc(var(--spacing) * -0.5);
   }
   .ms-1 {
     margin-inline-start: calc(var(--spacing) * 1);
@@ -1296,6 +1317,9 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
   .apexcharts-xaxistooltip {
     .apexcharts-canvas & {
       color: var(--color-body) !important;
@@ -1430,6 +1454,9 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
   .h-\[3px\] {
     height: 3px;
   }
@@ -1447,6 +1474,9 @@
   }
   .h-\[calc\(100\%-1rem\)\] {
     height: calc(100% - 1rem);
+  }
+  .h-auto {
+    height: auto;
   }
   .h-full {
     height: 100%;
@@ -1555,6 +1585,9 @@
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
   .w-22 {
     width: calc(var(--spacing) * 22);
   }
@@ -1597,6 +1630,15 @@
   .w-\[50px\] {
     width: 50px;
   }
+  .w-\[110px\] {
+    width: 110px;
+  }
+  .w-\[120px\] {
+    width: 120px;
+  }
+  .w-\[160px\] {
+    width: 160px;
+  }
   .w-full {
     width: 100%;
   }
@@ -1620,6 +1662,12 @@
   }
   .max-w-70 {
     max-width: calc(var(--spacing) * 70);
+  }
+  .max-w-\[110px\] {
+    max-width: 110px;
+  }
+  .max-w-\[300px\] {
+    max-width: 300px;
   }
   .max-w-\[400px\] {
     max-width: 400px;
@@ -1680,6 +1728,9 @@
     .datatable-wrapper & .datatable-input:focus {
       border-color: var(--color-brand);
     }
+  }
+  .min-w-\[160px\] {
+    min-width: 160px;
   }
   .flex-1 {
     flex: 1;
@@ -1745,6 +1796,9 @@
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1845,6 +1899,13 @@
       --tw-space-x-reverse: 0;
       margin-inline-start: calc(calc(var(--spacing) * 3) * var(--tw-space-x-reverse));
       margin-inline-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
+  .space-x-4 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
   .gap-y-1 {
@@ -2236,6 +2297,9 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
+  .p-3\.5 {
+    padding: calc(var(--spacing) * 3.5);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -2436,6 +2500,10 @@
   .leading-\[100\%\] {
     --tw-leading: 100%;
     line-height: 100%;
+  }
+  .leading-\[120\%\] {
+    --tw-leading: 120%;
+    line-height: 120%;
   }
   .leading-none {
     --tw-leading: var(--leading-none);
@@ -2902,6 +2970,11 @@
       background-color: var(--color-red-500);
     }
   }
+  .sm\:col-span-1 {
+    @media (width >= 40rem) {
+      grid-column: span 1 / span 1;
+    }
+  }
   .md\:inset-0 {
     @media (width >= 48rem) {
       inset: calc(var(--spacing) * 0);
@@ -2986,9 +3059,19 @@
       padding: calc(var(--spacing) * 0);
     }
   }
+  .md\:p-5 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 5);
+    }
+  }
   .md\:p-6 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:py-6 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 6);
     }
   }
   .md\:pt-6 {

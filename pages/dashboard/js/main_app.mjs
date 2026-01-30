@@ -1,7 +1,5 @@
-import { authChecker } from "./auth.mjs";
 import { elMoreLoader, elMoreLoaderButton } from "./html_elements.mjs";
 import { cardsWrite, moreLoaderUI, skeletonWrite } from "./ui_write.mjs";
-authChecker();
 
 let limit = 12,
 skip = 0,
@@ -18,9 +16,9 @@ function moreLoader(bool) {
     }
 }
 
-
 mainRequest();
 function mainRequest() {
+
 if(skip>total) {
     skeletonWrite(false);
     elMoreLoader.classList.remove("flex");
@@ -39,10 +37,6 @@ if(skip>total) {
                 elMoreLoader.classList.add("hidden");
             }
         }
-    }).catch(err=>{
-        console.log(err);
-        document.querySelector("#error_box").classList.remove("hidden");
-        document.querySelector("#error_box").classList.add("flex");
     });
 }
 }
@@ -51,5 +45,6 @@ export {
     limit,
     total,
     skip,
-    moreLoader
+    moreLoader,
+    mainRequest
 }
