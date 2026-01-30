@@ -43,6 +43,7 @@ if(skip>total) {
         console.log(err);
         document.querySelector("#error_box").classList.remove("hidden");
         document.querySelector("#error_box").classList.add("flex");
+        document.body.classList.add("overflow-hidden");
     });
 }
 }
