@@ -36,6 +36,9 @@ if(skip>total) {
                 elMoreLoader.classList.remove("flex");
                 elMoreLoader.classList.add("hidden");
             }
+        } else {
+            document.querySelector("#empty_box").classList.remove("hidden");
+            document.querySelector("#empty_box").classList.add("flex");
         }
     });
 }
