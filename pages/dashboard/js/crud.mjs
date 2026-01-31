@@ -14,9 +14,9 @@ function deleteAnimal(id) {
         .then(res=>res.text())
         .then(res=>{
             if(res=="deleted successfully") {
-                document.querySelector("#popup-modal").classList="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full hidden";
-                document.querySelector("#popup-modal").setAttribute("aria-modal","false");
-                document.querySelector("#popup-modal").removeAttribute("role");
+                document.querySelector("#delete-modal").classList="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full hidden";
+                document.querySelector("#delete-modal").setAttribute("aria-modal","false");
+                document.querySelector("#delete-modal").removeAttribute("role");
                 document.body.classList.remove("overflow-hidden");
                 document.querySelector("wbr").nextElementSibling.remove();
                 toastUI("Deleted successfuly","success");
@@ -146,6 +146,7 @@ elAddForm.addEventListener("submit",(evt)=>{
                 setTimeout(()=>{
                     localStorage.removeItem("access_token");
                     localStorage.removeItem("user_name");
+                    window.location.href=window.location.origin;
                 },3000);
             } else {
             document.querySelector("#add-modal").classList="overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full hidden";
