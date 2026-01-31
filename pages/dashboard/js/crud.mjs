@@ -28,6 +28,7 @@ function deleteAnimal(id) {
                 setTimeout(()=>{
                     localStorage.removeItem("access_token");
                     localStorage.removeItem("user_name");
+                    window.location.href=window.location.origin;
                 },3000);
             } else {
                 toastUI("Error... try again","error");
